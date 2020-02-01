@@ -29,8 +29,8 @@ public class BaseClass {
 	
 	@AfterTest
 	public void tearDown() {		
-		chromeDriver.close();
-		chromeDriver.quit();
+		//chromeDriver.close();
+		//chromeDriver.quit();
 	}
 	
 	public WebDriver getDriverChrome() {

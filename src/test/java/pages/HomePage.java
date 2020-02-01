@@ -66,6 +66,12 @@ public class HomePage {
 		Assert.assertTrue(barraBusqueda.isDisplayed());
 	}
 	
+	public void validaPromocion() {
+		WebElement promocion = chromeDriver.findElement(By.xpath(locators.getPromocionesXpath()));
+		
+		Assert.assertTrue(promocion.isDisplayed());
+	}
+	
 	public void clickFotoPortada() {
 		WebElement fotoPortada = chromeDriver.findElement(By.xpath(locators.getFotoPortadaXpath()));
 		
@@ -78,6 +84,12 @@ public class HomePage {
 		//Aquí validamos que haya redirigido al usuario a otra página, si el URL se mantiene igual, entonces 
 		//el usuario no fue redirigido a ninguna parte y el botón no sirvió
 		Assert.assertFalse(urlActual.equals(urlDespuesClick));
+		
+	}
+	
+	public void clickCarritoCompras() {
+		WebElement iconoCarrito = chromeDriver.findElement(By.xpath(locators.getIconoCarrtioXpath()));
+		iconoCarrito.click();
 		
 	}
 	

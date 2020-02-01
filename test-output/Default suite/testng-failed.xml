@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.MyTest">
         <methods>
-          <include name="verificacionClickPortadaTC4"/>
+          <include name="agregaProductoAlCarritoTC8"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>

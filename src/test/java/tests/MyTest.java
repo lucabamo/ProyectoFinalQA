@@ -32,32 +32,60 @@ public class MyTest extends BaseClass{
 	}
 	
 	public void verificacionFotoPortadaTC3() {
+		home = new HomePage(chromeDriver);
 		home.validacionFotoPortada();
 	}
 
 	public void verificacionLinkContactUsTC17() {
+		home = new HomePage(chromeDriver);
 		home.validacionLinkContacUs();
 	}
 	
 	public void verificacionIconoCarritoTC6() {
+		home = new HomePage(chromeDriver);
 		home.validacionIconoCarrito();
 	}
 
 	public void verificacionTelefonoTC18() {
+		home = new HomePage(chromeDriver);
 		home.validacionTelefono();
 	}
 	
 	public void verificacionLinkSignInTC13() {
+		home = new HomePage(chromeDriver);
 		home.validacionLinkLogin();
 	}
 	
-	@Test
+	//@Test
 	public void verificacionClickPortadaTC4() {
 		home = new HomePage(chromeDriver);
 		home.clickFotoPortada();
 	}
 	
-	//Comentario de prueba 
+	//@Test
+	public void verificaPromocionTC1() {
+		home = new HomePage(chromeDriver);
+		home.validaPromocion();
+		
+	}
+	//@Test
+	public void clickCarritoComprasTC7() {
+		home = new HomePage(chromeDriver);
+		home.clickCarritoCompras();
+		carrito = new MyCartPage(chromeDriver);
+		carrito.validaURLCarrito();
+	}
+	@Test
+	public void agregaProductoAlCarritoTC8() {
+		home = new HomePage(chromeDriver);
+		home.busquedaVestidosCasuales();
+		casualDresses = new CasualDresses(chromeDriver);
+		casualDresses.seleccionaVestido();
+		resultados = new ResultsPage(chromeDriver);
+		resultados.agregarAlCarrito();	
+	}
+	
+	
 	
 	
 }

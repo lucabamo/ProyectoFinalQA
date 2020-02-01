@@ -21,6 +21,8 @@ public class LocatorRepository {
 	
 	private String telefonoXpath = "//div[@class='row']/nav/span[@class='shop-phone']";
 	
+	private String promocionesXpath = "//div[@id='htmlcontent_top']/ul/li/a[@href='http://www.prestashop.com/']";
+	
 	
 	private String botonWomenXpath = "//ul/li/a[@title='Women']";
 	
@@ -45,6 +47,10 @@ public class LocatorRepository {
 	
 	public String getLinkLoginXpath() {
 		return linkLoginXpath;
+	}
+	
+	public String getPromocionesXpath() {
+		return promocionesXpath;
 	}
 	
 	public String getLinkContactUsXpath() {
