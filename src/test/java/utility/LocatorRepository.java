@@ -43,7 +43,20 @@ public class LocatorRepository {
 	
 	private String CartXpath = "//div[@class='shopping_cart']/a";
 		
+	private String botonPopularXpath = "//ul[@id='home-page-tabs']/li/a[contains(text(),'Popular')]";
+	
+	private String botonBestSellerXpath = "//ul[@id='home-page-tabs']/li/a[contains(text(),'Best')]";
+	
 	private String numeroProductos = "";
+	
+	
+	public String getBotonPopularXpath() {
+		return botonPopularXpath;
+	}
+	
+	public String getBotonBestXpath() {
+		return botonBestSellerXpath;
+	}
 	
 	public String getLinkLoginXpath() {
 		return linkLoginXpath;

@@ -56,6 +56,11 @@ public class MyTest extends BaseClass{
 		home.validacionLinkLogin();
 	}
 	
+	public void verificaBarraDeBusqueda10() {
+		home = new HomePage(chromeDriver);
+		home.validacionBarraDeBusqueda(); 
+	}
+	
 	//@Test
 	public void verificacionClickPortadaTC4() {
 		home = new HomePage(chromeDriver);
@@ -75,7 +80,7 @@ public class MyTest extends BaseClass{
 		carrito = new MyCartPage(chromeDriver);
 		carrito.validaURLCarrito();
 	}
-	@Test
+	//@Test
 	public void agregaProductoAlCarritoTC8() {
 		home = new HomePage(chromeDriver);
 		home.busquedaVestidosCasuales();
@@ -84,8 +89,41 @@ public class MyTest extends BaseClass{
 		resultados = new ResultsPage(chromeDriver);
 		resultados.agregarAlCarrito();	
 	}
+	@Test
+	public void buscarAlgoEnLaBarraDeBusquedaTC12() {
+		home = new HomePage(chromeDriver);
+		home.buscarAlgoEnLaBarraDeBusqueda();
+	}
 	
+	public void darClickEnSingINTC14() {
+		home = new HomePage(chromeDriver);
+		home.darClickEnSingIn();
+	}
 	
+	public void darClickEnContactUSTC19() {
+		home = new HomePage(chromeDriver);
+		home.darClickEnContactUS();	
+	}
+	
+	public void verificaBotonPopularTC21() {
+		home = new HomePage(chromeDriver);
+		home.validacionBotonPopular();
+	}
+	
+	public void verificaBotonBestSellersTC22() {
+		home = new HomePage(chromeDriver);
+		home.validacionBotonBestSellers();
+	}
+	
+	public void clickEnBotonPopularTC23() {
+		home = new HomePage(chromeDriver);
+		home.clickEnBotonPopular();
+	}
+	
+	public void clickEnBotonBestSellerTC24() {
+		home = new HomePage(chromeDriver);
+		home.clickEnBotonBestSeller();
+	}
 	
 	
 }

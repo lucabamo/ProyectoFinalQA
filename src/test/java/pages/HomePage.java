@@ -33,8 +33,20 @@ public class HomePage {
 		WebElement fotoPortada = chromeDriver.findElement(By.xpath(locators.getFotoPortadaXpath()));
 		
 		Assert.assertTrue(fotoPortada.isDisplayed());
-
 	}
+	
+	public void validacionBotonPopular() {
+		WebElement popular = chromeDriver.findElement(By.xpath(locators.getBotonPopularXpath()));
+		
+		Assert.assertTrue(popular.isDisplayed());
+	}
+	
+	public void validacionBotonBestSellers() {
+		WebElement bestSellers = chromeDriver.findElement(By.xpath(locators.getBotonBestXpath()));
+		
+		Assert.assertTrue(bestSellers.isDisplayed());
+	}
+	
 	
 	public void validacionIconoCarrito() {
 		WebElement iconoCarrito = chromeDriver.findElement(By.xpath(locators.getIconoCarrtioXpath()));
@@ -92,5 +104,48 @@ public class HomePage {
 		iconoCarrito.click();
 		
 	}
+	
+	public void buscarAlgoEnLaBarraDeBusqueda() {
+		WebElement barraBusqueda = chromeDriver.findElement(By.xpath(locators.getBarraDeBusquedaXpath()));
+		barraBusqueda.sendKeys("Dresses");
+		WebElement botonBusqueda = chromeDriver.findElement(By.xpath(locators.getBotonBuscar()));
+		botonBusqueda.click();
+		
+	}
+	
+	public void darClickEnSingIn() {
+		String URLEsperada = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
+		WebElement linkLogin = chromeDriver.findElement(By.xpath(locators.getLinkLoginXpath()));
+		linkLogin.click();
+		String URLActual = chromeDriver.getCurrentUrl();
+		Assert.assertTrue(URLEsperada.equals(URLActual));
+		
+	}
+	
+	public void darClickEnContactUS() {
+		String URLEsperada = "http://automationpractice.com/index.php?controller=contact";
+		WebElement linkContact = chromeDriver.findElement(By.xpath(locators.getLinkContactUsXpath()));
+		linkContact.click();
+		String URLActual = chromeDriver.getCurrentUrl();
+		Assert.assertTrue(URLEsperada.equals(URLActual));
+	}
+	
+	public void clickEnBotonPopular() {
+		WebElement popular = chromeDriver.findElement(By.xpath(locators.getBotonPopularXpath()));
+		popular.click();
+		WebElement productoPopular = chromeDriver.findElement(By.xpath(locators.getfirstTshirtXpath()));
+		Assert.assertTrue(productoPopular.isDisplayed());
+		
+	}
+	
+	public void clickEnBotonBestSeller() {
+		WebElement bestSeller = chromeDriver.findElement(By.xpath(locators.getBotonPopularXpath()));
+		bestSeller.click();
+		WebElement productoBestSeller = chromeDriver.findElement(By.xpath(locators.getfirstTshirtXpath()));
+		Assert.assertTrue(productoBestSeller.isDisplayed());
+	
+	}
+	
+	
 	
 }
